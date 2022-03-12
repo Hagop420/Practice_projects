@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JavaScript</title>
+   <style>
+      body{
+         background-color: rgb(216, 176, 73);
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      img{
+         height:400px;
+         width:30%;
+         object-fit: contain;
+      }
+      header{
+         font-size: 2rem;
+         text-transform: uppercase;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         height:100vh;
+         align-items: center;
+         justify-content: center;
+      }
+
+      #about{
+         position: relative;
+         bottom: 220px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      #about h3{
+         padding-top:10px;
+         font-size: 2rem;
+      }
+
+      #about ul{
+         list-style:georgian
+
+
+      }
+
+      #about ul li{
+         font-style: italic;
+         font-size: 1.2rem;
+      }
+   </style>
+</head>
+<body>
+
+   <header>
+      <h2>JavaScript(ES5)-(ES6)</h2>
+      <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" alt="JavaScript_logo">
+   </header>
+
+   <section id="about">
+      <h3>What we'll cover</h3>
+      <ul>
+         <li>What it is</li>
+         <li>When it was released</li>
+         <li>Is it popular</li>
+         <li class='js_exp'>Why people enjoy coding</li>
+      </ul>
+   </section>
+   
+
+
+   <script>
+      console.log(document.getElementsByTagName('li'));
+
+      for(let y=0; y<document.getElementsByTagName('li').length; y+=1){
+         document.getElementsByTagName('li')[y].style.color='red'
+      }
+      console.log(document.getElementsByClassName('js_exp'));
+
+      Array.from(document.getElementsByClassName('js_exp')).forEach(oop=>{
+         console.log(oop.style.background='blue');
+      })
+      </script>
+</body>
+</html>

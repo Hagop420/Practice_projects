@@ -1,0 +1,554 @@
+@media (max-width: 1700px) {
+  footer {
+    display: block;
+  }
+  #GITT {
+    margin: 0 auto 10px;
+    padding-top: 12px;
+  }
+  .G_link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .light_blu {
+    height: 23vh;
+  }
+  #email {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    margin: auto 5rem;
+
+    margin-top: -10px;
+  }
+  .giip {
+    margin: -5px auto;
+  }
+  #phone_MQ {
+    background-color: #333;
+
+    height: 23vh;
+  }
+  /* phone */
+  #phn {
+    margin: auto;
+    padding-top: 10px;
+    position: relative;
+    top: 5px;
+  }
+
+  .phone_word {
+    margin: 10px -300px;
+    color: #fff;
+  }
+
+  #digits {
+    font-size: 25px;
+    margin-top: 200px;
+    margin-left: 2px;
+    position: relative;
+    bottom: 185px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 401px) {
+  nav {
+    background: none;
+    z-index: 2;
+    position: relative;
+    display: inline-flex;
+    margin: auto;
+    width: 100%;
+  }
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .OR {
+    margin: auto;
+    display: block;
+    position: relative;
+    bottom: 25px;
+
+    left: 248px;
+  }
+
+  .BL {
+    display: block;
+    margin: auto;
+    position: relative;
+    bottom: 25px;
+    padding: 1rem;
+
+    left: 255px;
+  }
+  .JS {
+    margin: auto;
+    position: relative;
+    bottom: 25px;
+    margin-bottom: 30px;
+    left: 180px;
+  }
+
+  #navbar_ul {
+    display: flex;
+    position: relative;
+    left: 120px;
+    z-index: 1;
+  }
+  #navbar_ul ul li > a {
+    padding: none;
+    position: relative;
+
+    bottom: 40px;
+    z-index: 2;
+    margin-right: 0;
+    margin-top: 70px;
+    display: inline-flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  #bio > .description {
+    margin-top: 90px;
+    text-align: center;
+    padding: 4rem;
+    align-items: flex-end;
+  }
+
+  #bio {
+    background-color: silver;
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    width: 195%;
+  }
+  #bio > .description > a {
+    margin: 3rem auto;
+    display: block;
+    border: 0;
+    border-radius: 30px;
+    background-color: orangered;
+    padding: 1.3rem 5px;
+
+    width: 250px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #about_me {
+    height: 96vh;
+    width: 195%;
+  }
+  #about_me h1 {
+    margin-top: -10px;
+  }
+
+  #about_me p {
+    /* width: 40%; */
+    text-align: center;
+    margin: 200px auto;
+    width: 80%;
+    /* 
+    margin:autotext-align: center; */
+    position: absolute;
+    /* margin-top: 400px; */
+  }
+
+  .github_hr {
+    position: relative;
+    margin-top: 400px;
+    /* top: 10px; */
+    display: flex;
+    right: 90px;
+    align-self: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    top: 285px;
+  }
+
+  .profile_img img {
+    border: 0;
+    /* margin-top: -70px; */
+    /* width: 30%; */
+    border-radius: 100%;
+    position: relative;
+    bottom: 30px;
+    height: 170px;
+    display: block;
+    margin: auto;
+    /* margin-top: -30px; */
+    padding: auto 4rem;
+  }
+  .github_a {
+    margin: -300px 194px;
+    display: block;
+    text-align: center;
+    width: 250px;
+  }
+
+  #working_man {
+    display: none;
+  }
+
+  #GITT {
+    margin: 0 auto 10px;
+    padding-top: 12px;
+  }
+  .G_link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .light_blu {
+    height: 30vh;
+  }
+  #email {
+    padding: 1rem auto 20px auto;
+    display: block;
+    text-align: center;
+    margin: auto 5rem;
+
+    margin-top: -10px;
+  }
+  .giip {
+    margin: -5px auto;
+  }
+  #phone_MQ {
+    background-color: #333;
+
+    height: 40vh;
+  }
+  /* phone */
+  #phn {
+    margin: auto;
+    padding-top: 10px;
+    position: relative;
+    top: 5px;
+  }
+
+  .phone_word {
+    margin: 10px -300px;
+    color: #fff;
+  }
+
+  #digits {
+    font-size: 25px;
+    margin-top: 200px;
+    margin-left: 2px;
+    position: relative;
+    bottom: 185px;
+  }
+
+  /* contact_page */
+  #contact_page {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    width: 195%;
+  }
+  #contact_page .form > h1 {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  #contact_page .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form > label {
+    padding: 0.3rem;
+  }
+
+  .form input[type='text'] {
+    padding: 0.5rem;
+    border: 0;
+  }
+
+  .phone_img {
+    display: none;
+  }
+  #ph {
+    display: block;
+    margin: auto;
+    position: relative;
+    bottom: 150px;
+    height: 140px;
+  }
+  footer {
+    margin: auto;
+    width: 195%;
+    height: 50vh;
+  }
+
+  .footer_items_flex {
+    margin: auto;
+  }
+  .footer_items_flex > p {
+    margin-bottom: 10px;
+  }
+  #email {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    margin: auto auto;
+    font-size: 20px;
+    margin-top: -30px;
+  }
+  .G_link {
+    text-align: center;
+    margin: auto -100px;
+  }
+
+  #phone_MQ {
+    height: 30vh;
+    margin: auto;
+    /* width: 120%; */
+    display: block;
+  }
+}
+
+/* 700 */
+
+@media (min-width: 700px) and (max-width: 701px) {
+  nav {
+    background: none;
+    z-index: 2;
+    position: relative;
+    display: inline-flex;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .OR {
+    margin: auto;
+    display: block;
+    position: relative;
+    bottom: 25px;
+
+    left: 126px;
+  }
+
+  .BL {
+    display: block;
+    margin: auto;
+    position: relative;
+    bottom: 25px;
+    padding: 1rem;
+
+    left: 126px;
+  }
+  .JS {
+    margin: auto;
+    position: relative;
+    bottom: 25px;
+    margin-bottom: 30px;
+    left: 127px;
+  }
+
+  #navbar_ul {
+    display: flex;
+    margin: auto;
+
+    z-index: 1;
+  }
+  #navbar_ul ul li > a {
+    padding: none;
+    position: relative;
+    bottom: 40px;
+    z-index: 2;
+    margin-right: 0;
+    margin-top: 70px;
+    display: inline-flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  #bio > .description {
+    margin-top: 30px;
+    text-align: center;
+    padding: 4rem;
+    align-items: flex-end;
+  }
+
+  #bio {
+    background-color: silver;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+  }
+  #bio > .description > a {
+    margin: -30px auto;
+    display: block;
+    border: 0;
+    border-radius: 30px;
+    margin-bottom: 200px;
+    background-color: orangered;
+    padding: 1.3rem 5px;
+    width: 250px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #about_me {
+    height: 140vh;
+  }
+  #about_me h1 {
+    margin-top: -10px;
+  }
+
+  #about_me p {
+    /* width: 40%; */
+    text-align: center;
+    margin: 200px auto;
+    width: 80%;
+    /* 
+     margin:autotext-align: center; */
+    position: absolute;
+    /* margin-top: 400px; */
+  }
+
+  .github_hr {
+    position: relative;
+    margin-top: 300px;
+    /* top: 10px; */
+    display: flex;
+    right: 210px;
+    align-self: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    top: 285px;
+  }
+
+  .profile_img img {
+    border: 0;
+    /* margin-top: -70px; */
+    /* width: 30%; */
+    border-radius: 100%;
+    position: relative;
+    bottom: 30px;
+    height: 170px;
+    display: block;
+    margin: auto;
+    /* margin-top: -30px; */
+    padding: auto 4rem;
+  }
+  .github_a {
+    margin: -300px 9.4rem;
+    display: block;
+    text-align: center;
+    width: 250px;
+  }
+
+  #working_man {
+    display: none;
+  }
+
+  #GITT {
+    margin: 0 auto 10px;
+    padding-top: 12px;
+  }
+  .G_link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .light_blu {
+    height: 30vh;
+  }
+
+  .giip {
+    margin: -5px auto;
+  }
+  #phone_MQ {
+    background-color: #333;
+
+    height: 40vh;
+  }
+  /* phone */
+  #phn {
+    margin: auto;
+    padding-top: 10px;
+    position: relative;
+    top: 5px;
+  }
+
+  .phone_word {
+    margin: 10px -300px;
+    color: #fff;
+  }
+
+  #digits {
+    font-size: 25px;
+    margin-top: 200px;
+    margin-left: 2px;
+    position: relative;
+    bottom: 185px;
+  }
+
+  /* contact_page */
+  #contact_page {
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #contact_page .form > h1 {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  #contact_page .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form > label {
+    padding: 0.3rem;
+  }
+
+  .form input[type='text'] {
+    padding: 0.5rem;
+    border: 0;
+  }
+
+  .phone_img {
+    display: none;
+  }
+  #ph {
+    display: block;
+    margin: auto;
+    position: relative;
+    bottom: 140px;
+    left: 20px;
+    height: 130px;
+  }
+
+  .footer_items_flex > p {
+    margin-bottom: 10px;
+  }
+  #email {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    margin: auto auto;
+
+    margin-top: -30px;
+    font-size: 18px;
+  }
+  .G_link {
+    text-align: center;
+    margin: auto -100px;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  /* #phone_MQ {
+    height: 50vh;
+    margin: 100px 1rem;
+  } */
+}

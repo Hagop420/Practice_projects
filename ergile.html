@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/ergile.css">
+   <title>Loungin Vibes</title>
+   <style>
+
+      *{
+      font-family: 'Orbitron', sans-serif;
+         margin:0;
+         padding: 0;
+      }
+      body{
+         /* background-color:springgreen; */
+      }
+      a{
+         text-decoration: none;
+         color:#000
+      }
+      #main_page{
+         position:relative
+      }
+      #main_page::before{
+         content:'';
+         height:113vh;
+         width:100%;
+         top:0;
+         left:0;
+         opacity: 1;
+         mix-blend-mode: darken;
+         z-index: -1;
+         position: absolute;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center center;
+         background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+      }
+      nav{
+         opacity: .9;
+         background-color:rgb(0 , 153 , 76) ;
+         max-height:110px
+      }
+      nav img{
+         padding:1rem;
+    max-height:100px;
+    margin-top: -16px;
+      }
+
+      nav ul{
+         margin:5px;
+         display:flex;
+         align-self: flex-end;
+         justify-content: flex-end;
+         list-style: none;
+      }
+      nav ul li a{
+         display: block;
+         padding:10px 16px;
+         margin:-85px 0;
+     transition: 2px all ease;
+
+
+  }
+  nav li a:hover{
+transform: translateY(-10px);
+border-bottom: green 3px solid;
+  }
+  
+
+    
+
+     
+
+      section{
+         display:flex;
+         flex-direction: column;
+         height:100vh;
+         color:   rgb(153 , 255 , 153) ;
+ ;       line-height: 3.5rem;
+         font-size: 30px;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+      }
+      section>p{
+         font-size: 17px;
+
+      }
+
+      section>a{
+         background-color: springgreen;
+         padding:.7rem 2rem;
+         border:0;
+         transition: 3s all ease;
+
+      }
+      section>a:hover{
+         background-color: #ccc;
+        opacity: .9;
+
+      }
+
+
+      #History_page{
+         position: relative;
+         display:flex;
+         flex-direction: column;
+        height:100vh;
+         color:springgreen;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+      }
+
+      #History_page::before{
+         content:'';
+         position: absolute;
+background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');       left:0;
+         height:100vh;
+         width:100%;
+         /* opacity: .9; */
+         /* mix-blend-mode: color-dodge; */
+         z-index: -1;
+         object-fit: cover;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center center;
+      }
+
+      #History_page>p{
+         max-width: 960px;
+         padding:0rem 2rem
+          
+      }
+
+
+
+      /* hamburger menu */
+
+
+
+
+      .menu-wrap {
+    position: fixed;
+    top: -530px;
+    right: 2500px;
+   
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    z-index: 1;
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 200%;
+    height: 7px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 0.9s all ease;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 7px;
+    background: inherit;
+  }
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 0.9s all ease;
+    transform: rotate(0deg);
+    width: 100%;
+    height: 7px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(270deg);
+  }
+
+  /* Turns Lines Into + */
+  .menu-wrap .toggler:checked + .hamburger > div:before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 2s;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: #000;
+    opacity: 0.8;
+    border-radius: 20%;
+    width: 200vw;
+    height: 400vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: yellow;
+    font-size: 1.5rem;
+    padding: 1rem;
+    opacity: 1;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: red;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media qury */
+
+
+
+
+@media (min-width: 375px) and (max-width: 376px) {
+  #main_page::before {
+    margin-top: 288px;
+    content: '';
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+  nav img {
+    display: block;
+    margin: auto;
+  }
+  nav img {
+    padding: 0.7rem;
+    max-height: 100px;
+    margin-top: -16px;
+  }
+  nav {
+    min-height: 18rem;
+    opacity: 1;
+  }
+
+  nav ul {
+    /* margin: 5px; */
+    padding-top: 200px;
+    flex-direction: column-reverse;
+    text-align: center;
+    display: block;
+  }
+
+  section h3 {
+    position: relative;
+    bottom: 70px;
+    font-size: 28px;
+    margin-left: 60px;
+    font-weight: bold;
+  }
+  section > p {
+    position: relative;
+    bottom: 70px;
+    font-size: 13px;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  section > a {
+    background-color: springgreen;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    bottom: 70px;
+    font-size: 20px;
+    border: 0;
+    transition: 3s all ease;
+  }
+  section > a:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+  }
+
+  #History_page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    color: springgreen;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #History_page h1 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  #History_page > p {
+    max-width: 500%;
+    padding: 0rem 2rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 10.5px;
+  }
+}
+
+@media (min-width: 667px) and (max-width: 668px) {
+  #main_page::before {
+    margin-top: 288px;
+    content: '';
+    height: 90vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+  nav img {
+    display: block;
+    margin: auto;
+  }
+  nav img {
+    padding: 0.7rem;
+    max-height: 100px;
+    margin-top: -16px;
+  }
+  nav {
+    min-height: 18rem;
+    opacity: 1;
+  }
+  section {
+    position: relative;
+    bottom: 40px;
+  }
+  section > a {
+    padding: 0.4rem 3rem;
+    font-size: 20px;
+  }
+
+  nav ul {
+    /* margin: 5px; */
+    padding-top: 200px;
+    flex-direction: column-reverse;
+    text-align: center;
+    display: block;
+  }
+
+  #History_page h1 {
+    position: relative;
+    bottom: 20px;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 120vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #History_page > p {
+    max-width: 300%;
+    padding: 0rem 10rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 9.6px;
+  }
+}
+@media (min-width: 414px) and (max-width: 415px) {
+  #main_page::before {
+    margin-top: 288px;
+    content: '';
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+  nav img {
+    display: block;
+    margin: auto;
+  }
+  nav img {
+    padding: 0.7rem;
+    max-height: 100px;
+    margin-top: -16px;
+  }
+  nav {
+    min-height: 18rem;
+    opacity: 1;
+  }
+
+  nav ul {
+    /* margin: 5px; */
+    padding-top: 200px;
+    flex-direction: column-reverse;
+    text-align: center;
+    display: block;
+  }
+
+  section h3 {
+    position: relative;
+    bottom: 70px;
+    font-size: 28px;
+    margin-left: 60px;
+    font-weight: bold;
+  }
+  section > p {
+    position: relative;
+    bottom: 70px;
+    font-size: 13px;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  section > a {
+    background-color: springgreen;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    bottom: 70px;
+    font-size: 20px;
+    border: 0;
+    transition: 3s all ease;
+  }
+  section > a:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+  }
+
+  #History_page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    color: springgreen;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #History_page h1 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  #History_page > p {
+    max-width: 500%;
+    padding: 0rem 2rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 10.5px;
+  }
+}
+@media (min-width: 896px) and (max-width: 897px) {
+  #main_page::before {
+    /* margin-top: 288px; */
+    content: '';
+    height: 112vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+  nav img {
+    display: block;
+    margin: auto;
+  }
+  nav img {
+    padding: 0.7rem;
+    max-height: 100px;
+    margin-top: -16px;
+  }
+  nav {
+    min-height: 3rem;
+    opacity: 1;
+  }
+
+  nav ul {
+    /* margin: 5px; */
+    padding-top: 200px;
+    flex-direction: column-reverse;
+    text-align: center;
+    display: none;
+  }
+
+  section h3 {
+    position: relative;
+    bottom: 50px;
+    font-size: 28px;
+    margin-left: 60px;
+    font-weight: bold;
+  }
+  section > p {
+    position: relative;
+    bottom: 50px;
+    font-size: 13px;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  section > a {
+    background-color: springgreen;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    bottom: 50px;
+    font-size: 20px;
+    border: 0;
+    transition: 3s all ease;
+  }
+  section > a:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+  }
+
+  #History_page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    color: springgreen;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #History_page h1 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  #History_page > p {
+    max-width: 500%;
+    padding: 0rem 11rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 10.5px;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 22px;
+    margin-right: 40px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    z-index: 1;
+    /* display: block; */
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 30px;
+    height: 20px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 170%;
+    height: 5px;
+    background: lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 5px;
+    background: inherit;
+  }
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(0deg);
+    width: 100%;
+    height: 5px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(270deg);
+  }
+
+  /* Turns Lines Into + */
+  .menu-wrap .toggler:checked + .hamburger > div:before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 2s;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 1s ease 1s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: #000;
+    opacity: 0.8;
+    border-radius: 50%;
+
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    animation: br forwards 2s ease-in-out;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  @keyframes br {
+    to {
+      border-radius: 0%;
+    }
+  }
+
+  .menu-wrap .menu > div > div > ul {
+    position: relative;
+    bottom: 90px;
+    line-height: 0rem;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    line-height: 9rem;
+    display: block;
+    font-size: 29px;
+    position: relative;
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: green;
+    text-decoration: none;
+    /* transition: color 0.4s ease; */
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: green;
+    border-bottom: none;
+  }
+}
+@media (min-width: 390px) and (max-width: 391px) {
+  #main_page::before {
+    /* margin-top: 288px; */
+    content: '';
+    height: 112vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+  nav {
+    min-height: 140px;
+  }
+
+  nav img {
+    display: block;
+    margin: auto;
+    height: 120px;
+  }
+
+  nav ul {
+    /* margin: 5px; */
+    padding-top: 200px;
+    flex-direction: column-reverse;
+    text-align: center;
+    display: none;
+  }
+
+  section h3 {
+    position: relative;
+    bottom: 50px;
+    font-size: 28px;
+    margin-left: 60px;
+    font-weight: bold;
+  }
+  section > p {
+    position: relative;
+    bottom: 50px;
+    font-size: 13px;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  section > a {
+    background-color: springgreen;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    bottom: 50px;
+    font-size: 20px;
+    border: 0;
+    transition: 3s all ease;
+  }
+  section > a:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+  }
+
+  #History_page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    color: springgreen;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #History_page h1 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  #History_page > p {
+    /* max-width: 500%; */
+    padding: 0rem 3rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 10.5px;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 32px;
+    margin-right: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    z-index: 1;
+    /* display: block; */
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 30px;
+    height: 30px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 170%;
+    height: 7px;
+    background: lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 7px;
+    background: inherit;
+  }
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(0deg);
+    width: 100%;
+    height: 5px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(270deg);
+  }
+
+  /* Turns Lines Into + */
+  .menu-wrap .toggler:checked + .hamburger > div:before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 2s;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 1s ease 1s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: #000;
+    opacity: 0.8;
+    border-radius: 50%;
+
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    animation: br forwards 2s ease-in-out;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  @keyframes br {
+    to {
+      border-radius: 0%;
+    }
+  }
+
+  .menu-wrap .menu > div > div > ul {
+    position: relative;
+    bottom: 90px;
+    line-height: 0rem;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: yellow;
+    display: block;
+    font-size: 29px;
+
+    opacity: 1;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    line-height: 9rem;
+
+    color: green;
+    text-decoration: none;
+    /* transition: color 0.4s ease; */
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: green;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 844px) and (max-width: 845px) {
+  #main_page::before {
+    margin-top: 100px;
+    content: '';
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+
+  nav img {
+    /* padding: 1.1rem; */
+    max-height: 100px;
+    margin: -10px auto;
+    display: block;
+  }
+  nav {
+    min-height: 8rem;
+    opacity: 1;
+  }
+
+  nav ul {
+    display: none;
+    margin: 25px;
+    padding-top: 200px;
+    flex-direction: column-reverse;
+
+    text-align: center;
+  }
+
+  section h3 {
+    position: relative;
+    bottom: 70px;
+    font-size: 28px;
+    margin-left: 60px;
+    font-weight: bold;
+  }
+  section > p {
+    position: relative;
+    bottom: 70px;
+    font-size: 13px;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  section > a {
+    background-color: springgreen;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    bottom: 70px;
+    font-size: 20px;
+    border: 0;
+    transition: 3s all ease;
+  }
+  section > a:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+  }
+
+  #History_page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    color: springgreen;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #History_page h1 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  #History_page > p {
+    max-width: 500%;
+    padding: 0rem 9rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 10.5px;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 22px;
+    margin-right: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    z-index: 1;
+    /* display: block; */
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 170%;
+    height: 7px;
+    background: lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 7px;
+    background: inherit;
+  }
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(0deg);
+    width: 100%;
+    height: 5px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(270deg);
+  }
+
+  /* Turns Lines Into + */
+  .menu-wrap .toggler:checked + .hamburger > div:before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 2s;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 1s ease 1s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: #000;
+    opacity: 0.8;
+    border-radius: 50%;
+
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    animation: br forwards 2s ease-in-out;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  @keyframes br {
+    to {
+      border-radius: 0%;
+    }
+  }
+
+  .menu-wrap .menu > div > div > ul {
+    position: relative;
+    bottom: 90px;
+    line-height: 0rem;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    line-height: 9rem;
+    color: yellow;
+    display: block;
+    font-size: 29px;
+    position: relative;
+    bottom: 70px;
+    opacity: 1;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: green;
+    text-decoration: none;
+    /* transition: color 0.4s ease; */
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: green;
+    border-bottom: none;
+  }
+}
+@media (min-width: 393px) and (max-width: 394px) {
+  #main_page::before {
+    margin-top: 100px;
+    content: '';
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+
+  nav img {
+    /* padding: 1.1rem; */
+    max-height: 110px;
+    margin: -20px auto;
+    display: block;
+  }
+  nav {
+    min-height: 8rem;
+    opacity: 1;
+  }
+
+  nav ul {
+    display: none;
+    margin: 25px;
+    padding-top: 200px;
+    flex-direction: column-reverse;
+
+    text-align: center;
+  }
+
+  section h3 {
+    position: relative;
+    bottom: 70px;
+    font-size: 28px;
+    margin-left: 60px;
+    font-weight: bold;
+  }
+  section > p {
+    position: relative;
+    bottom: 70px;
+    font-size: 13px;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  section > a {
+    background-color: springgreen;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    bottom: 70px;
+    font-size: 20px;
+    border: 0;
+    transition: 3s all ease;
+  }
+  section > a:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+  }
+
+  #History_page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    color: springgreen;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #History_page h1 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  #History_page > p {
+    max-width: 500%;
+    padding: 0rem 2rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 10.5px;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 22px;
+    margin-right: 15px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    z-index: 1;
+    /* display: block; */
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 30px;
+    height: 30px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 170%;
+    height: 7px;
+    background: lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 7px;
+    background: inherit;
+  }
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(0deg);
+    width: 100%;
+    height: 5px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(270deg);
+  }
+
+  /* Turns Lines Into + */
+  .menu-wrap .toggler:checked + .hamburger > div:before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 2s;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 1s ease 1s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: #000;
+    opacity: 0.8;
+    border-radius: 50%;
+
+    width: 100vw;
+    height: 500vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    animation: br forwards 2s ease-in-out;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  @keyframes br {
+    to {
+      border-radius: 0%;
+    }
+  }
+
+  .menu-wrap .menu > div > div > ul {
+    position: relative;
+    bottom: 90px;
+    line-height: 0rem;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    line-height: 9rem;
+    color: yellow;
+    display: block;
+    font-size: 29px;
+    position: relative;
+    bottom: 70px;
+    opacity: 1;
+  }
+  .AS {
+    position: relative;
+    bottom: 104px;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: green;
+    text-decoration: none;
+    /* transition: color 0.4s ease; */
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: green;
+    border-bottom: none;
+  }
+}
+@media (min-width: 851px) and (max-width: 852px) {
+  #main_page::before {
+    margin-top: 100px;
+    content: '';
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://www.dailynews.com/wp-content/uploads/2021/09/LDN-Z-HOOKAH.jpg');
+  }
+
+  nav img {
+    /* padding: 1.1rem; */
+    max-height: 110px;
+    margin: -20px auto;
+    display: block;
+  }
+  nav {
+    min-height: 8rem;
+    opacity: 1;
+  }
+
+  nav ul {
+    display: none;
+    margin: 25px;
+    padding-top: 200px;
+    flex-direction: column-reverse;
+
+    text-align: center;
+  }
+
+  section h3 {
+    position: relative;
+    bottom: 70px;
+    font-size: 28px;
+    margin-left: 60px;
+    font-weight: bold;
+  }
+  section > p {
+    position: relative;
+    bottom: 70px;
+    font-size: 13px;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  section > a {
+    background-color: springgreen;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    bottom: 70px;
+    font-size: 20px;
+    border: 0;
+    transition: 3s all ease;
+  }
+  section > a:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+  }
+
+  #History_page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    color: springgreen;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #History_page::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/c9/8a/8c/c98a8ccaa1729de7db53e21821adef85.gif');
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* opacity: .9; */
+    /* mix-blend-mode: color-dodge; */
+    z-index: -1;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #History_page h1 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  #History_page > p {
+    max-width: 500%;
+    padding: 0rem 9rem;
+    position: relative;
+    bottom: 10px;
+
+    font-size: 10.5px;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 22px;
+    margin-right: 15px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    z-index: 1;
+    /* display: block; */
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 30px;
+    height: 30px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 170%;
+    height: 7px;
+    background: lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 7px;
+    background: inherit;
+  }
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: 1s all ease;
+    transform: rotate(0deg);
+    width: 100%;
+    height: 5px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(270deg);
+  }
+
+  /* Turns Lines Into + */
+  .menu-wrap .toggler:checked + .hamburger > div:before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 2s;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 1s ease 1s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: #000;
+    opacity: 0.8;
+    border-radius: 50%;
+
+    width: 100vw;
+    height: 500vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    animation: br forwards 2s ease-in-out;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  @keyframes br {
+    to {
+      border-radius: 0%;
+    }
+  }
+
+  .menu-wrap .menu > div > div > ul {
+    position: relative;
+    bottom: 90px;
+    line-height: 0rem;
+  }
+  .alfa {
+    position: relative;
+    right: 60px;
+    top: 3px;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    line-height: 9rem;
+    display: block;
+    /* margin: auto; */
+    /* word-spacing: 1rem; */
+    font-size: 29px;
+    position: relative;
+    bottom: 70px;
+    opacity: 1;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: green;
+    text-decoration: none;
+    /* transition: color 0.4s ease; */
+  }
+  .menu-wrap .menu > div > div > ul > li > a:nth-child(1) {
+    color: blue;
+    text-decoration: none;
+    /* transition: color 0.4s ease; */
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: green;
+    border-bottom: none;
+  }
+}
+
+
+   </style>
+</head>
+<body>
+
+
+   <header id='main_page'>
+
+   </header>
+
+<nav>
+   <a href="">
+   <img src="https://thumb.tildacdn.com/tild3563-3262-4164-a136-653433303738/-/resize/744x/-/format/webp/logo_fumari_transpar.png" alt="Fumari_png">
+   </a>
+   <ul>
+      <li><a href="">Hookahs we use</a></li>
+      <li><a href="">History</a></li>
+      <li><a href="">Flavors</a></li>
+      <li><a href="">Location</a></li>
+      <li><a href="">Reservations and Seating</a></li>
+   </ul>
+
+   <div class="menu-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div>
+     </div>
+     <!-- <p>A</p> -->
+      
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Hookahs we use<span class="alfa">Flavors</span></a></li>
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Reservations <span class="AS">and <span class="sit">Seating</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+   <section>
+      <h3>King Fumari <img src="https://img.icons8.com/color/48/000000/crown.png"/></h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, repudiandae.</p>
+      <a href="">
+         <p>How It Began</p>
+      </a>
+   </section>
+
+
+
+
+
+   <header id="History_page">
+      <h1>When It All Started</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita porro provident impedit maxime, quam natus quos cumque. Animi illum ratione, adipisci beatae aliquid consequuntur, repellat nemo totam ut facilis earum dolor cumque dicta neque in? Distinctio eius minus natus eos corrupti debitis esse molestiae dolorem, tenetur temporibus consectetur vitae incidunt libero maxime, enim magnam magni sapiente nulla eligendi ab omnis!</p>
+      &nbsp;
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, odit, quae ab consequatur esse recusandae corporis voluptatum nesciunt non temporibus asperiores eligendi! Reprehenderit alias exercitationem iure hic laborum esse optio rem quidem vitae eius assumenda magni, earum blanditiis molestias molestiae, enim ab nesciunt? Quasi, ut reprehenderit commodi accusantium, architecto voluptas eaque, maxime maiores illum iure nisi ea cumque placeat non earum vel voluptatibus repellendus? Deleniti modi amet repellendus eum esse.</p>
+    
+   </header>
+   
+
+
+   
+   <script>
+
+      const numbs= [5,4,3,2,1];
+      const numbs_s= 'pdw';
+
+
+
+
+      // APPENDING
+let j;
+j='K'
+j+='OPS'
+console.log(j);
+
+      console.log(String(numbs_s).charAt(String(numbs_s.length -1)).concat('pdw'));
+
+    const yoyo900=  console.log(numbs_s.slice(-2).split().reverse().join('').concat(' Im the plug').replace('dw' , 'If your worried get bent'));
+
+
+      const gogo=(num_1)=>{
+         return num_1 <43
+      }
+
+
+
+console.log(numbs.map(oop=>{
+   return oop.toString().split('').reverse().join('').concat(' stewie')
+}).concat('oil').forEach(oop=>{
+   console.log(oop);
+}));
+
+   // numbs.forEach(oop=>{
+   //    console.log(Array(oop).concat('321'));
+   // })
+      
+
+      console.log(String(numbs.find(gogo)).concat(3));
+
+
+console.log('I hate 12 or '.concat(j).split('').reverse().join(''));
+      console.log(j);
+
+      const nam21='HAGOPOSPOSD'
+      console.log(nam21.lastIndexOf('P'));
+
+
+
+      const win=`
+      <ul>
+         <li>${numbs_s}</li>
+         <li>${numbs_s.slice(-2).split().reverse().join('').concat(' Im the plug').replace('dw' , 'If your worried get bent')}</li>
+         <li></li>
+         <li></li>
+
+
+         </ul>
+
+         `;
+         console.log(Array(win).forEach(oop=>{
+            console.log(oop);
+         }));
+   </script>
+</body>
+</html>
